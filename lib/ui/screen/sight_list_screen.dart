@@ -7,37 +7,38 @@ const double _appBarElevation = 0;
 Padding _appBarTitleText = Padding(
   padding: const EdgeInsets.only(top: _appBarTopPadding),
   child: RichText(
-      text: const TextSpan(
-    style: TextStyle(
-      fontFamily: 'Roboto',
-      fontWeight: FontWeight.w700,
-      fontSize: 32,
-    ),
-    children: [
-      TextSpan(
-          text: 'С',
-          style: TextStyle(
-            color: Color.fromRGBO(76, 175, 80, 1),
-          ),
-          children: [
-            TextSpan(
-              text: 'писок\n',
-              style: TextStyle(color: _defaultAppBarTextColor),
+    text: const TextSpan(
+      style: TextStyle(
+        fontFamily: 'Roboto',
+        fontWeight: FontWeight.w700,
+        fontSize: 32,
+      ),
+      children: [
+        TextSpan(
+            text: 'С',
+            style: TextStyle(
+              color: Color.fromRGBO(76, 175, 80, 1),
             ),
-          ]),
-      TextSpan(
-          text: 'и',
-          style: TextStyle(
-            color: Color.fromRGBO(251, 192, 45, 1),
-          ),
-          children: [
-            TextSpan(
-              text: 'нтересных мест',
-              style: TextStyle(color: _defaultAppBarTextColor),
-            )
-          ]),
-    ],
-  )),
+            children: [
+              TextSpan(
+                text: 'писок\n',
+                style: TextStyle(color: _defaultAppBarTextColor),
+              ),
+            ]),
+        TextSpan(
+            text: 'и',
+            style: TextStyle(
+              color: Color.fromRGBO(251, 192, 45, 1),
+            ),
+            children: [
+              TextSpan(
+                text: 'нтересных мест',
+                style: TextStyle(color: _defaultAppBarTextColor),
+              )
+            ]),
+      ],
+    ),
+  ),
 );
 
 class SightListScreen extends StatefulWidget {
