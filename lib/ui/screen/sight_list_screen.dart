@@ -1,20 +1,44 @@
 import 'package:flutter/material.dart';
 
+const Color _defaultAppBarTextColor = Color.fromRGBO(37, 40, 73, 1);
 const double _appBarHeight = 72;
 const double _appBarTopPadding = 64;
 const double _appBarElevation = 0;
-const Padding _appBarTitleText = Padding(
-    padding: EdgeInsets.only(top: _appBarTopPadding),
-    child: Text(
-      'Список\nинтересных мест',
-      style: TextStyle(
-        color: Color.fromRGBO(37, 40, 73, 1),
-        fontFamily: 'Roboto',
-        fontWeight: FontWeight.w700,
-        fontSize: 32,
-      ),
-      textAlign: TextAlign.left,
-    ));
+Padding _appBarTitleText = Padding(
+  padding: const EdgeInsets.only(top: _appBarTopPadding),
+  child: RichText(
+      text: const TextSpan(
+    style: TextStyle(
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w700,
+      fontSize: 32,
+    ),
+    children: [
+      TextSpan(
+          text: 'С',
+          style: TextStyle(
+            color: Color.fromRGBO(76, 175, 80, 1),
+          ),
+          children: [
+            TextSpan(
+              text: 'писок\n',
+              style: TextStyle(color: _defaultAppBarTextColor),
+            ),
+          ]),
+      TextSpan(
+          text: 'и',
+          style: TextStyle(
+            color: Color.fromRGBO(251, 192, 45, 1),
+          ),
+          children: [
+            TextSpan(
+              text: 'нтересных мест',
+              style: TextStyle(color: _defaultAppBarTextColor),
+            )
+          ]),
+    ],
+  )),
+);
 
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
