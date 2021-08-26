@@ -29,7 +29,7 @@ final List<Sight> mocks = [
   Rome's most popular tourist attractions and also has links to the Roman Catholic Church, as each Good 
   Friday the Pope leads a torchlit "Way of the Cross" procession that starts in the area around the Colosseum.
   The Colosseum is also depicted on the Italian version of the five-cent euro coin.''',
-      type: 'historical landmark'),
+      type: 'historical landmark',),
   const Sight(
       name: 'Wembley Stadium',
       lat: 51.3316,
