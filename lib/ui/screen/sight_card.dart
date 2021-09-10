@@ -50,35 +50,36 @@ class SightCard extends StatelessWidget {
             ),
           ),
           Container(
-              height: 92,
-              decoration: const BoxDecoration(
-                color: Color.fromRGBO(245, 245, 245, 1),
+            height: 92,
+            decoration: const BoxDecoration(
+              color: Color.fromRGBO(245, 245, 245, 1),
+            ),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: RichText(
+                    text: TextSpan(
+                        style: const TextStyle(
+                          fontFamily: 'Roboto',
+                          color: Color.fromRGBO(59, 62, 91, 1),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        text: '${sight.name}\n',
+                        children: const [
+                      TextSpan(
+                        text: 'краткое описание',
+                        style: TextStyle(
+                          color: Color.fromRGBO(124, 126, 146, 1),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      )
+                    ])),
               ),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: RichText(
-                      text: TextSpan(
-                          style: const TextStyle(
-                            fontFamily: 'Roboto',
-                            color: Color.fromRGBO(59, 62, 91, 1),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
-                          text: '${sight.name}\n',
-                          children: const [
-                        TextSpan(
-                          text: 'краткое описание',
-                          style: TextStyle(
-                            color: Color.fromRGBO(124, 126, 146, 1),
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        )
-                      ])),
-                ),
-              )),
+            ),
+          ),
         ],
       ),
     );

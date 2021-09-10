@@ -6,11 +6,12 @@ class Sight {
   final String details;
   final String type;
 
-  const Sight(
-      {required this.name,
-      required this.lat,
-      required this.lon,
-      required this.url,
-      required this.details,
-      required this.type,});
+  const Sight({
+    required this.name,
+    required this.lat,
+    required this.lon,
+    required this.url,
+    required this.details,
+    required this.type,
+  });
 }

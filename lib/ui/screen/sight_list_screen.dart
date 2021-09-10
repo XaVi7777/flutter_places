@@ -17,16 +17,17 @@ Padding _appBarTitleText = Padding(
       ),
       children: [
         TextSpan(
-            text: 'С',
-            style: TextStyle(
-              color: Color.fromRGBO(76, 175, 80, 1),
+          text: 'С',
+          style: TextStyle(
+            color: Color.fromRGBO(76, 175, 80, 1),
+          ),
+          children: [
+            TextSpan(
+              text: 'писок\n',
+              style: TextStyle(color: _defaultAppBarTextColor),
             ),
-            children: [
-              TextSpan(
-                text: 'писок\n',
-                style: TextStyle(color: _defaultAppBarTextColor),
-              ),
-            ],),
+          ],
+        ),
         TextSpan(
             text: 'и',
             style: TextStyle(
