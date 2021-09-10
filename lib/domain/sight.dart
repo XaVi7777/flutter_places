@@ -12,5 +12,5 @@ class Sight {
       required this.lon,
       required this.url,
       required this.details,
-      required this.type});
+      required this.type,});
 }

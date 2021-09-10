@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:places/mocs.dart';
+import 'package:places/ui/screen/sight_card.dart';
 
 const Color _defaultAppBarTextColor = Color.fromRGBO(37, 40, 73, 1);
 const double _appBarHeight = 72;
@@ -24,7 +26,7 @@ Padding _appBarTitleText = Padding(
                 text: 'писок\n',
                 style: TextStyle(color: _defaultAppBarTextColor),
               ),
-            ]),
+            ],),
         TextSpan(
             text: 'и',
             style: TextStyle(
@@ -58,8 +60,15 @@ class _SightListScreenState extends State<SightListScreen> {
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: _appBarTitleText,
       ),
-      body: const Center(
-        child: Text('Hello'),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.only(top: 16),
+        child: Column(
+          children: [
+            SightCard(sight: mocks[0]),
+            SightCard(sight: mocks[1]),
+            SightCard(sight: mocks[2]),
+          ],
+        ),
       ),
     );
   }
