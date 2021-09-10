@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:places/domain/sight.dart';
 
-
-
 class SightCard extends StatelessWidget {
   final Sight sight;
 
@@ -27,25 +25,27 @@ class SightCard extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                    left: 16,
-                    top: 16,
-                    child: Text(
-                      sight.type,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                      ),
-                    )),
-                Positioned(
-                    top: 16,
-                    right: 16,
-                    child: Container(
-                      width: 20,
-                      height: 18,
+                  left: 16,
+                  top: 16,
+                  child: Text(
+                    sight.type,
+                    style: const TextStyle(
                       color: Colors.white,
-                    )),
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 16,
+                  right: 16,
+                  child: Container(
+                    width: 20,
+                    height: 18,
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
           ),

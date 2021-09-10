@@ -26,7 +26,7 @@ Padding _appBarTitleText = Padding(
                 text: 'писок\n',
                 style: TextStyle(color: _defaultAppBarTextColor),
               ),
-            ]),
+            ],),
         TextSpan(
             text: 'и',
             style: TextStyle(
