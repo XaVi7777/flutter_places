@@ -18,9 +18,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SightDetailsScreen(
-        sight: mocks[0],
-      ),
+      home: const SightListScreen(),
     );
   }
 }
