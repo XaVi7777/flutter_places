@@ -27,12 +27,12 @@ final List<Sight> mocks = [
     type: 'sports construction',
   ),
   const Sight(
-      name: 'Niagara Falls',
-      lat: 43.0799,
-      lon: 79.0747,
-      url:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/3Falls_Niagara.jpg/1920px-3Falls_Niagara.jpg',
-      details: '''
+    name: 'Niagara Falls',
+    lat: 43.0799,
+    lon: 79.0747,
+    url:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/3Falls_Niagara.jpg/1920px-3Falls_Niagara.jpg',
+    details: '''
   Niagara Falls /naɪˈæɡrə, naɪˈæɡərə/ is a group of three waterfalls at the southern end of Niagara Gorge,
   spanning the border between the province of Ontario in Canada and the state of New York in the United States.
   The largest of the three is Horseshoe Falls, also known as Canadian Falls, which straddles the international
@@ -46,5 +46,6 @@ final List<Sight> mocks = [
   Niagara Falls is famed for its beauty and is a valuable source of hydroelectric power.
   Balancing recreational, commercial, and industrial uses has been a challenge for the stewards 
   of the falls since the 19th century.''',
-      type: 'natural wonder'),
+    type: 'natural wonder',
+  ),
 ];

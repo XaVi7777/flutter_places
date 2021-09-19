@@ -23,7 +23,9 @@ class SightDetailsScreen extends StatelessWidget {
                 width: 32,
                 decoration: const BoxDecoration(
                     color: _defaultBackgroundColor,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    )),
               ),
             ),
           ],
