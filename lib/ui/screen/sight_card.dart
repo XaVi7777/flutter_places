@@ -18,38 +18,54 @@ class SightCard extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Container(
-              height: 96,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                color: Colors.amber,
-              ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 16,
-                    child: Text(
-                      sight.type,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    top: 16,
-                    right: 16,
-                    child: Container(
-                      width: 20,
-                      height: 18,
+            Stack(
+              children: [
+                Container(
+                  height: 96,
+                  width: double.infinity,
+                  child: ClipRRect(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(16)),
+                      child: Image.network(
+                        sight.url,
+                        fit: BoxFit.fitWidth,
+                        loadingBuilder: (BuildContext context, Widget child,
+                            ImageChunkEvent? loadingProgress) {
+                          if (loadingProgress == null) return child;
+                          return Center(
+                            child: CircularProgressIndicator(
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      loadingProgress.expectedTotalBytes!
+                                  : null,
+                            ),
+                          );
+                        },
+                      )),
+                ),
+                Positioned(
+                  left: 16,
+                  top: 16,
+                  child: Text(
+                    sight.type,
+                    style: const TextStyle(
                       color: Colors.white,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
                     ),
                   ),
-                ],
-              ),
+                ),
+                Positioned(
+                  top: 16,
+                  right: 16,
+                  child: Container(
+                    width: 20,
+                    height: 18,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(
               height: 16,

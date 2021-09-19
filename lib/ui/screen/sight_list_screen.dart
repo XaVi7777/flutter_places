@@ -55,7 +55,7 @@ class _SightListScreenState extends State<SightListScreen> {
           preferredSize: const Size.fromHeight(150),
           child: CustomAppBar(
             title: _appBarTitleText,
-          )),
+          ),),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 16),
         child: Column(
@@ -83,6 +83,6 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.fromLTRB(16, 64, 16, 0), child: title);
+        padding: const EdgeInsets.fromLTRB(16, 64, 16, 0), child: title,);
   }
 }
