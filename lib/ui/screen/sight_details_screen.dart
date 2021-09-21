@@ -15,29 +15,41 @@ class SightDetailsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              color: Colors.amber,
-              child: Stack(
-                children: [
-                  Container(
-                    height: 360,
-                  ),
-                  Positioned(
-                    top: 60,
-                    left: 16,
-                    child: Container(
-                      height: 32,
-                      width: 32,
-                      decoration: const BoxDecoration(
-                        color: _defaultBackgroundColor,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+            Stack(
+              children: [
+                SizedBox(
+                  height: 360,
+                  child: Image.network(
+                    sight.url,
+                    fit: BoxFit.cover,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Center(
+                        child: CircularProgressIndicator(
+                          value: loadingProgress.expectedTotalBytes != null
+                              ? loadingProgress.cumulativeBytesLoaded /
+                                  loadingProgress.expectedTotalBytes!
+                              : null,
                         ),
+                      );
+                    },
+                  ),
+                ),
+                Positioned(
+                  top: 60,
+                  left: 16,
+                  child: Container(
+                    height: 32,
+                    width: 32,
+                    decoration: const BoxDecoration(
+                      color: _defaultBackgroundColor,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Container(
               padding: const EdgeInsets.all(16.0),
